@@ -1,0 +1,77 @@
+{
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": 4,
+      "argument2": {
+        "type": "minecraft:quarter_negative",
+        "argument": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": "minecraft:overworld/depth",
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": {
+                "type": "minecraft:flat_cache",
+                "argument": {
+                  "type": "minecraft:cache_2d",
+                  "argument": {
+                    "type": "minecraft:add",
+                    "argument1": {
+                      "type": "minecraft:mul",
+                      "argument1": 0,
+                      "argument2": {
+                        "type": "minecraft:add",
+                        "argument1": 1,
+                        "argument2": {
+                          "type": "minecraft:mul",
+                          "argument1": -1,
+                          "argument2": {
+                            "type": "minecraft:cache_once",
+                            "argument": {
+                              "type": "minecraft:blend_alpha"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "argument2": {
+                      "type": "minecraft:mul",
+                      "argument1": {
+                        "type": "minecraft:terrain_shaper_spline",
+                        "spline": "jaggedness",
+                        "min_value": 0,
+                        "max_value": 1.28,
+                        "continentalness": "minecraft:overworld/continents",
+                        "erosion": "minecraft:overworld/erosion",
+                        "weirdness": "minecraft:overworld/ridges"
+                      },
+                      "argument2": {
+                        "type": "minecraft:cache_once",
+                        "argument": {
+                          "type": "minecraft:blend_alpha"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "argument2": {
+                "type": "minecraft:half_negative",
+                "argument": {
+                  "type": "minecraft:noise",
+                  "noise": "minecraft:jagged",
+                  "xz_scale": 1500,
+                  "y_scale": 0
+                }
+              }
+            }
+          },
+          "argument2": "deeper_oceans:overworld/warped_factor"
+        }
+      }
+    },
+    "argument2": "minecraft:overworld/base_3d_noise"
+  }
+  

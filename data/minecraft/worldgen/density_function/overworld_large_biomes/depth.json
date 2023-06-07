@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:add",
+  "argument1": "deeper_oceans:overworld_large_biomes/warped_gradient",
+  "argument2": {
+    "type": "minecraft:flat_cache",
+    "argument": {
+      "type": "minecraft:cache_2d",
+      "argument": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:blend_offset"
+          },
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": 1,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": -1,
+              "argument2": {
+                "type": "minecraft:cache_once",
+                "argument": {
+                  "type": "minecraft:blend_alpha"
+                }
+              }
+            }
+          }
+        },
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:terrain_shaper_spline",
+            "spline": "offset",
+            "min_value": -0.81,
+            "max_value": 2.5,
+            "continentalness": "minecraft:overworld_large_biomes/continents",
+            "erosion": "minecraft:overworld_large_biomes/erosion",
+            "weirdness": "minecraft:overworld/ridges"
+          },
+          "argument2": {
+            "type": "minecraft:cache_once",
+            "argument": {
+              "type": "minecraft:blend_alpha"
+            }
+          }
+        }
+      }
+    }
+  }
+}
