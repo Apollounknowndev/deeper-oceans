@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "deeper_oceans",
+  "version": "1.0.1a",
+  "name": "Deeper Oceans",
+  "description": "Oceans triple as deep as vanilla's regular oceans!",
+  "authors": [
+    "Apollo"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/deeper-oceans",
+    "sources": "https://github.com/Apollounknowndev/deeper-oceans",
+    "issues": "https://github.com/Apollounknowndev/deeper-oceans/issues"
+  },
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [],
+  "depends": {
+    "minecraft": ">=1.19",
+    "fabric-api": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.com/invite/vFz67Pvceu"
+      }
+    }
+  }
+}
