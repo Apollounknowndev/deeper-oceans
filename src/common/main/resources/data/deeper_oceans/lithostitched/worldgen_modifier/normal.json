@@ -1,0 +1,65 @@
+{
+  "type": "lithostitched:wrap_density_function",
+  "target_function": "minecraft:overworld/offset",
+  "wrapper_function": {
+    "type": "minecraft:clamp",
+    "input": {
+      "type": "minecraft:add",
+      "argument1": -0.5,
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": 0.5,
+          "argument2": {
+            "type": "lithostitched:wrapped_marker"
+          }
+        },
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": 1,
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:add",
+              "argument1": -1,
+              "argument2": {
+                "type": "deeper_oceans:depth_multiplier"
+              }
+            },
+            "argument2": {
+              "type": "minecraft:spline",
+              "spline": {
+                "coordinate": "minecraft:overworld/continents",
+                "points": [
+                  {
+                    "location": -1.05,
+                    "derivative": 0,
+                    "value": 0
+                  },
+                  {
+                    "location": -0.8,
+                    "derivative": 0,
+                    "value": 1
+                  },
+                  {
+                    "location": -0.35,
+                    "derivative": 0,
+                    "value": 1
+                  },
+                  {
+                    "location": -0.15,
+                    "derivative": 0,
+                    "value": 0
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "min": -1.3,
+    "max": 64
+  }
+}

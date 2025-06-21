@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "dev.worldgen.deeper.oceans.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "StructurePieceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
